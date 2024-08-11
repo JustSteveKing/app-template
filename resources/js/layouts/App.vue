@@ -19,12 +19,16 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Link, usePage } from "@inertiajs/vue3";
+import { Link, usePage, router } from "@inertiajs/vue3";
 import {computed} from "vue";
 
 const page = usePage();
 const user = computed(() => page?.props?.auth?.user)
 const app = computed(() => page?.props.app);
+
+const active = async (url: string): boolean => {
+  return router.page.url === url
+}
 </script>
 
 <template>
@@ -43,30 +47,17 @@ const app = computed(() => page?.props.app);
         </div>
         <div class="flex-1">
           <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
-            <a
-              href="/"
+            <Link
+              :href="route('dashboard')"
+              title="Go to your dashboard"
+              :class="{
+                'bg-muted text-primary': active(route('dashboard')),
+              }"
               class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
             >
               <Home class="h-4 w-4" />
               Dashboard
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-            >
-              <ShoppingCart class="h-4 w-4" />
-              Orders
-              <Badge class="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                6
-              </Badge>
-            </a>
-            <a
-              href="#"
-              class="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
-            >
-              <Package class="h-4 w-4" />
-              Products
-            </a>
+            </Link>
             <a
               href="#"
               class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
@@ -116,20 +107,25 @@ const app = computed(() => page?.props.app);
           </SheetTrigger>
           <SheetContent side="left" class="flex flex-col">
             <nav class="grid gap-2 text-lg font-medium">
-              <a
-                href="#"
+              <Link
+                :href="route('dashboard')"
+                title="Go to your dashboard"
                 class="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 class="h-6 w-6" />
                 <span class="sr-only">{{ app.name }}</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                :href="route('dashboard')"
+                title="Go to your dashboard"
+                :class="{
+                  'active': active(route('dashboard')),
+                }"
                 class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
               >
                 <Home class="h-5 w-5" />
                 Dashboard
-              </a>
+              </Link>
               <a
                 href="#"
                 class="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"

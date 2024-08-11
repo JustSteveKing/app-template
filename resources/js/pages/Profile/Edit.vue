@@ -24,7 +24,7 @@ defineProps<{
 
       <UpdatePasswordForm class="w-full"/>
 
-      <DeleteUserForm class="w-full" />
+      <DeleteUserForm class="w-full"/>
     </main>
   </App>
 </template>

@@ -1,22 +1,32 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc && vite build"
-    },
-    "devDependencies": {
-        "@inertiajs/vue3": "^1.0.0",
-        "@tailwindcss/forms": "^0.5.3",
-        "@vitejs/plugin-vue": "^5.0.0",
-        "autoprefixer": "^10.4.12",
-        "axios": "^1.6.4",
-        "laravel-vite-plugin": "^1.0",
-        "postcss": "^8.4.31",
-        "tailwindcss": "^3.2.1",
-        "typescript": "^5.5.3",
-        "vite": "^5.0",
-        "vue": "^3.4.0",
-        "vue-tsc": "^2.0.24"
-    }
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build"
+  },
+  "devDependencies": {
+    "@inertiajs/vue3": "^1.0.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "autoprefixer": "^10.4.12",
+    "axios": "^1.6.4",
+    "laravel-vite-plugin": "^1.0",
+    "lucide-vue-next": "^0.427.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.2.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^2.0.24"
+  },
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
+  "dependencies": {
+    "@vueuse/core": "^10.11.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "radix-vue": "^1.9.3",
+    "tailwind-merge": "^2.5.0",
+    "tailwindcss-animate": "^1.0.7"
+  }
 }

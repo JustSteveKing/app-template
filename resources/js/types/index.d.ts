@@ -1,12 +1,17 @@
-export interface User {
-    id: number;
-    name: string;
-    email: string;
-    email_verified_at: string;
-}
+export type App = {
+  name: string
+};
+
+export type User = {
+  id: string
+  name: string
+  email: string
+  verified: boolean
+};
 
 export type PageProps<T extends Record<string, unknown> = Record<string, unknown>> = T & {
     auth: {
         user: User;
     };
+    app: App;
 };

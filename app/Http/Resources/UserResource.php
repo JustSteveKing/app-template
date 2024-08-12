@@ -18,6 +18,9 @@ class UserResource extends JsonResource
             'name' => $this->resource->name,
             'email' => $this->resource->email,
             'verified' => $this->resource->hasVerifiedEmail(),
+            'subscription' => [
+                'trial' => $this->resource->onTrial(),
+            ],
         ];
     }
 }

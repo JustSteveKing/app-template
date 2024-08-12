@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Carbon\CarbonInterface;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -23,6 +24,8 @@ use Laravel\Cashier\Billable;
  * @property null|CarbonInterface $created_at
  * @property null|CarbonInterface $updated_at
  * @property null|CarbonInterface $deleted_at
+ * @property null|Subscription $subscription
+ * @property Collection<Subscription> $subscriptions
  */
 class User extends Authenticatable implements MustVerifyEmail
 {

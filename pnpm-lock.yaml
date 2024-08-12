@@ -30,6 +30,9 @@ importers:
       '@inertiajs/vue3':
         specifier: ^1.0.0
         version: 1.2.0(vue@3.4.37(typescript@5.5.4))
+      '@radix-icons/vue':
+        specifier: ^1.0.0
+        version: 1.0.0(vue@3.4.37(typescript@5.5.4))
       '@tailwindcss/forms':
         specifier: ^0.5.3
         version: 0.5.7(tailwindcss@3.4.9)
@@ -291,6 +294,11 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@radix-icons/vue@1.0.0':
+    resolution: {integrity: sha512-gKWWk9tTK/laDRRNe5KLLR8A0qUwx4q4+DN8Fq48hJ904u78R82ayAO3TrxbNLgyn2D0h6rRiGdLzQWj7rPcvA==}
+    peerDependencies:
+      vue: '>= 3'
 
   '@rollup/rollup-android-arm-eabi@4.20.0':
     resolution: {integrity: sha512-TSpWzflCc4VGAUJZlPpgAJE1+V60MePDQnBd7PPkpuEmOy8i87aL6tinFGKBFKuEDikYpig72QzdT3QPYIi+oA==}
@@ -1322,6 +1330,10 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@radix-icons/vue@1.0.0(vue@3.4.37(typescript@5.5.4))':
+    dependencies:
+      vue: 3.4.37(typescript@5.5.4)
 
   '@rollup/rollup-android-arm-eabi@4.20.0':
     optional: true

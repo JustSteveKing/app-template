@@ -19,6 +19,11 @@ return Application::configure(
         HandleInertiaRequests::class,
         AddLinkHeadersForPreloadedAssets::class,
     ]);
+    $middleware->validateCsrfTokens(
+        except: [
+            'stripe/*',
+        ],
+    );
 })->withExceptions(
     using: function (Exceptions $exceptions): void {},
 )->create();

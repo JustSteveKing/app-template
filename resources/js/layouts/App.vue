@@ -205,8 +205,9 @@ const active = async (url: string): boolean => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <span>Billing</span>
-                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                <Link title="Manage your subscription" class="w-full text-left" :href="route('billing.index')">
+                  <span>Billing</span>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <span>Settings</span>

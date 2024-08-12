@@ -33,7 +33,7 @@ const submit = async () => {
       </CardDescription>
     </CardHeader>
     <form @submit.prevent="submit" class="grid gap-4">
-      <CardContent>
+      <CardContent class="space-y-4">
         <div class="grid gap-2">
           <Label for="name">Name</Label>
           <Input
